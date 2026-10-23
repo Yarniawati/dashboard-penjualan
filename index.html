@@ -92,7 +92,7 @@ for(let m=f.a;m<=f.b;m++)for(let j=0;j<3;j++)jd[j]+=DN[m][j];
 $('k1').textContent=jt(om);$('k2').textContent=nf(tx);$('k3').textContent='Rp'+nf(Math.round(om/tx));$('k4').textContent=ul?nf(rs/ul,2):'–';
 // tren
 const ms=[];for(let m=f.a;m<=f.b;m++)ms.push(m);const v=ms.map(m=>tm==='om'?mo[m]:mt[m]),mxv=Math.max(...v),mnv=Math.min(...v),pk=v.indexOf(mxv),lw=v.indexOf(mnv);
-const W=640,H=270,L=56,R=22,T=28,B=30,iw=W-L-R,ih=H-T-B,mx=step(mxv),x=i=>ms.length==1?L+iw/2:L+i*iw/(ms.length-1),y=q=>T+ih-q/mx*ih,lb=q=>tm==='om'?(q>=1e9?nf(q/1e9,3)+' miliar':nf(q/1e6,1)+' jt'):nf(q);
+const W=640,H=270,L=56,R=22,T=28,B=30,iw=W-L-R,ih=H-T-B,mx=step(mxv),x=i=>ms.length==1?L+iw/2:L+i*iw/(ms.length-1),y=q=>T+ih-q/mx*ih,lb=q=>tm==='om'?(q>=1e9?nf(q/1e9,3)+' m':nf(q/1e6,1)+' jt'):nf(q);
 let s='<svg class="ch1" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Grafik garis per bulan">';
 for(let i=0;i<=4;i++){const q=mx*i/4;s+='<line class="gl" x1="'+L+'" x2="'+(W-R)+'" y1="'+y(q)+'" y2="'+y(q)+'"/><text class="ax" x="'+(L-8)+'" y="'+(y(q)+4)+'" text-anchor="end">'+lb(q)+'</text>'}
 const pts=v.map((q,i)=>x(i)+','+y(q)).join(' ');
